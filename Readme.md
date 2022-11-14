@@ -1,44 +1,41 @@
 #proyecto : api rest para la materia web 2 de la carrera TUDAI.
 
-api rest sencilla para poder utilizar desde phpMyAdmin, con el objetivo de manejar un CRUD de uuna tienda de bebidas.
+api rest sencilla para poder utilizar desde phpMyAdmin, con el objetivo de manejar un CRUD de una organizacion de arbitros y asociaciones.
 
 #como usar : endpoints.
-#Tabla de Productos.
 
-obtener todos los productos: http://localhost/web2/TPEapiRest/api/products.
-obtener un producto por id: http://localhost/web2/TPEapiRest/api/products/:ID.
-borrar producto: http://localhost/web2/TPEapiRest/api/products/:ID.
-editar producto: http://localhost/web2/TPEapiRest/api/products/:ID.
-agregar producto: http://localhost/web2/TPEapiRest/api/products.
+#Tabla de Arbitros.
 
-obtener productos ordenados por precio: http://localhost/web2/TPEapiRest/api/products/api/products?orderby=orden.
-para obtener los productos ordenados, escribir luego del orderby= "ASC" si se quiere ordenar de manera ascendente, o "DESC" si se quiere de manera descendente. 
+obtener todos los arbitros: http://localhost/Web%202/TP_Especial_2/api/umpires.
+obtener un arbitro por id: http://localhost/Web%202/TP_Especial_2/api/umpires/:ID.
+borrar arbitro: http://localhost/Web%202/TP_Especial_2/api/umpires/:ID.
+editar arbitro: http://localhost/Web%202/TP_Especial_2/api/umpires/:ID.
+agregar arbitro: http://localhost/Web%202/TP_Especial_2/api/umpires.
 
+obtener arbitros ordenados por arbitro: http://localhost/Web%202/TP_Especial_2/api/umpires/api/umpires?orderby=arbitro.
+para obtener los arbitros ordenados, escribir luego del orderby= "ASC" si se quiere ordenar de manera ascendente, o "DESC" si se quiere de manera descendente. 
 
-
-paginacion de productos:  http://localhost/web2/TPEapiRest/api/products?page=page&limit=limit.
+paginacion de arbitros:  http://localhost/Web%202/TP_Especial_2/api/umpires?page=page&limit=limit.
 
 ingresar en "page" la pagina que se quiere obtener, y en limit la cantidad de productos que se quieren por pagina.
 
-#tabla especificaciones.
+#tabla asociaciones.
 
+obtener todas las asociaciones: http://localhost/Web%202/TP_Especial_2/api/asociations.
+obtener una asociacion por id: http://localhost/Web%202/TP_Especial_2/api/asociations/:ID.
+borrar asociacion: http://localhost/Web%202/TP_Especial_2/api/asociations/:ID.
+editar asociacion: http://localhost/Web%202/TP_Especial_2/api/asociations/:ID.
+agregar asociacion: http://localhost/Web%202/TP_Especial_2/api/asociations.
 
+obtener asociaciones ordenadas por asociacion: http://localhost/Web%202/TP_Especial_2/api/asociations/api/asociations?orderby=asociacion.
 
-obtener todas las especificaciones: http://localhost/web2/TPEapiRest/api/specifications.
-obtener un producto por id: http://localhost/web2/TPEapiRest/api/specifications/:ID.
-borrar producto: http://localhost/web2/TPEapiRest/api/specifications/:ID.
-editar producto: http://localhost/web2/TPEapiRest/api/specifications/:ID.
-agregar producto: http://localhost/web2/TPEapiRest/api/specifications.
+mismas indicaciones para el ordenamiento de los arbitros.
 
-obtener especificaciones ordenadas por precio: http://localhost/web2/TPEapiRest/api/specifications/api/products?orderby=orden.
+paginacion de las asociaciones: http://localhost/Web%202/TP_Especial_2/api/asociations?page=page&limit=limit. 
 
-mismas indicaciones para el ordenamiento de los productos.
+mismas indicaciones que se usan para paginar los arbitros.
 
-paginacion de las especificaciones:  http://localhost/web2/TPEapiRest/api/products?page=page&limit=limit.
-
-mismas indicaciones que se usan para paginar los productos.
-
-obtener token de autorizacion:   http://localhost/web2/TPEapiRest/api/auth/token.
-usar este endpoint para obtener el token, el cual nos va a autorizar a editar, agregar, y eliminar productos y especificaciones.
+obtener token de autorizacion:   http://localhost/Web%202/TP_Especial_2/api/auth/token.
+usar este endpoint para obtener el token, el cual nos va a autorizar a editar, agregar, y eliminar arbitros y asociaciones.
 
 

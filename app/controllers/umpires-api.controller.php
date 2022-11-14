@@ -23,13 +23,13 @@ class UmpireController{
     public function getUmpires($params = null){
 
         //ordenar
-        //endpoint: /api/products?orderby=precio
+        //endpoint: /api/umpires?orderby=arbitro
         if (isset($_GET['orderby'])){
             $umpires = $this->model->getAllOrder($_GET['orderby']);
             $this->view->response($umpires);
         }
         //paginacion
-        //endpoint: /api/products?page=page&limit=limit
+        //endpoint: /api/umpires?page=page&limit=limit
         elseif(isset($_GET['page'])&&(isset($_GET['limit']))){
             $page = $_GET['page'];
             $limit = $_GET['limit'];
@@ -104,9 +104,10 @@ class UmpireController{
         
         if((empty($umpire->arbitro))||(empty($umpire->residencia))){
             $this->view->response("complete todos los datos", 400);
-        }else
+        }else{
         $this->model->update($umpire->arbitro, $umpire->residencia, $id);
         $umpire = $this->model->get($id);
         $this->view->response($umpire);
+        }
     }
 }

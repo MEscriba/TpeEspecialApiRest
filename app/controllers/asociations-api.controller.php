@@ -21,13 +21,13 @@ class AsociationController{
 
     public function getAsociations($params = null){
         //ordenar
-        //endpoint: /api/specifications?orderby=precio
+        //endpoint: /api/asociations?orderby=asociacion
         if (isset($_GET['orderby'])){
             $asociations = $this->model->getAllOrder($_GET['orderby']);
             $this->view->response($asociations);
         }
         //paginacion
-        //endpoint: /api/specifications?page=page?limit=limit
+        //endpoint: /api/asociations?page=page?limit=limit
         elseif(isset($_GET['page'])&&(isset($_GET['limit']))){
             $page =$_GET['page'];
             $limit =$_GET['limit'];
@@ -72,12 +72,11 @@ class AsociationController{
     
             if((empty($asociation->asociacion))||(empty($asociation->region))){
                 $this->view->response("complete todos los datos", 400);
-            }else
+            }else {
                 $id = $this->model->insert($asociation->asociacion, $asociation->region);
                 $asociation = $this->model->get($id);
                 $this->view->response($asociation, 201);
-        
-
+            }
     }
 
     public function deleteAsociation($params = null){
@@ -90,8 +89,9 @@ class AsociationController{
         if($asociation){
             $this->model->delete($id);
             $this->view->response($asociation);
-        }else
+        }else {
             $this->view->response("el asociacion con id=$id no existe", 404);
+        }
     }
 
     public function updateAsociation($params = null){
@@ -104,9 +104,10 @@ class AsociationController{
         
         if((empty($asociation->asociacion))||(empty($asociation->region))){
             $this->view->response("complete todos los datos", 400);
-        }else
+        }else {
         $this->model->update($asociation->asociacion, $asociation->region, $id);
         $asociation = $this->model->get($id);
-        $this->view->response( $asociation);
+        $this->view->response($asociation);
+        }
     }
 }
