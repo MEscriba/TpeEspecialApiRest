@@ -1,4 +1,4 @@
-#proyecto : api rest para la materia web 2 de la carrera TUDAI.
+#proyecto# : api rest para la materia web 2 de la carrera TUDAI.
 
 api rest sencilla para poder utilizar desde phpMyAdmin, con el objetivo de manejar un CRUD de una organizacion de arbitros y asociaciones.
 
