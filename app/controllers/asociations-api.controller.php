@@ -65,7 +65,7 @@ class AsociationController{
 
     public function insertAsociation($params = null){
         if(!$this->helper->isLoggedIn()){
-            $this->view->response("No estas logeado", 401);
+            $this->view->response("No estas logeado man", 401);
             return;
         }
         $asociation = $this->getData();
@@ -81,7 +81,7 @@ class AsociationController{
 
     public function deleteAsociation($params = null){
         if(!$this->helper->isLoggedIn()){
-            $this->view->response("No estas logeado", 401);
+            $this->view->response("No estas logeado man", 401);
             return;
         }
         $id = $params[':ID'];
@@ -96,7 +96,7 @@ class AsociationController{
 
     public function updateAsociation($params = null){
         if(!$this->helper->isLoggedIn()){
-            $this->view->response("No estas logeado", 401);
+            $this->view->response("No estas logeado man", 401);
             return;
         }
         $asociation = $this->getData();
