@@ -1,8 +1,5 @@
-<<<<<<< HEAD
+
 **proyecto : api rest para la materia web 2 de la carrera TUDAI.**
-=======
-#proyecto# : api rest para la materia web 2 de la carrera TUDAI.
->>>>>>> fd9ae7d0bc912cdf1e197e1752e166f16ba52b96
 
 api rest sencilla para poder utilizar desde phpMyAdmin, con el objetivo de manejar un CRUD de una organizacion de arbitros y asociaciones.
 
@@ -23,7 +20,7 @@ paginacion de arbitros:  http://localhost/Web%202/TP_Especial_2/api/umpires?page
 
 ingresar en "page" la pagina que se quiere obtener, y en limit la cantidad de productos que se quieren por pagina.
 
-filtrado de arbitros: 
+
 
 **tabla Asociaciones.**
 
