@@ -28,7 +28,7 @@ class AsociationModel{
     }
 
     public function delete($id){
-        $query = $this->db->prepare("DELETE FROM easociaciones WHERE id_asociacion =?");
+        $query = $this->db->prepare("DELETE FROM asociaciones WHERE id_asociacion =?");
         $query->execute([$id]);
         return $query->fetch(PDO::FETCH_OBJ);
     }

@@ -1,9 +1,9 @@
 
-**proyecto : api rest para la materia web 2 de la carrera TUDAI.**
+**#proyecto : api rest para la materia web 2 de la carrera TUDAI.**
 
-api rest sencilla para poder utilizar desde phpMyAdmin, con el objetivo de manejar un CRUD de una organizacion de arbitros y asociaciones.
+api rest sencilla con el objetivo de manejar un CRUD de una organizacion de arbitros y asociaciones.
 
-#como usar : endpoints.
+#como usar endpoints en POSTMAN
 -------------------------------------------------------------------------------------------------------------------------------------------
 **Tabla de Arbitros.**
 
@@ -20,8 +20,10 @@ paginacion de arbitros:  http://localhost/Web%202/TP_Especial_2/api/umpires?page
 
 ingresar en "page" la pagina que se quiere obtener, y en limit la cantidad de productos que se quieren por pagina.
 
+filtrar los arbitros por lugar donde residen: //endpoint: /api/umpires?filter=columna&value=valor
+Me traigo los arbitros de determinada residencia consultando un campo especifico de una columna y que coincida con la otra tabla
 
-
+-------------------------------------------------------------------------------------------------------------------------------------------
 **tabla Asociaciones.**
 
 obtener todas las asociaciones: http://localhost/Web%202/TP_Especial_2/api/asociations.
@@ -39,6 +41,15 @@ paginacion de las asociaciones: http://localhost/Web%202/TP_Especial_2/api/asoci
 mismas indicaciones que se usan para paginar los arbitros.
 
 obtener token de autorizacion:   http://localhost/Web%202/TP_Especial_2/api/auth/token.
-usar este endpoint para obtener el token, el cual nos va a autorizar a editar, agregar, y eliminar arbitros y asociaciones.
+Usar este endpoint para obtener el token, luego entrar a auth basic y loguearse con: 
+#el mail es admin@gmail.com
+#la contraseña es 1234
+
+Luego entrar a Bearer Token pero con la url normal para hacer los que nos pedia autorizacion para editar, agregar, y eliminar arbitros y asociaciones.
 
 
+----------------------------------------------------------------------------------------------------------
+#el mail es admin@gmail.com
+#la contraseña es 1234
+
+se adjunta la base de datos db_torneos.sql para trabajar con las tablas

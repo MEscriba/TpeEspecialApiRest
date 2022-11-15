@@ -10,7 +10,6 @@ class AuthApiController{
     private $view;
     private $authHelper;
     private $model;
-
     private $data;
 
     public function __construct() {
@@ -51,7 +50,7 @@ class AuthApiController{
             );
             $payload = array(
                 'id' => 1,
-                'name' => "Nico",
+                'name' => "martin",
                 'exp' => time()+3600
             );
             $header = base64url_encode(json_encode($header));

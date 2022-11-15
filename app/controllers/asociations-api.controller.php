@@ -21,7 +21,7 @@ class AsociationController{
 
     public function getAsociations($params = null){
         //ordenar
-        //endpoint: /api/asociations?orderby=asociacion
+        //endpoint: /api/asociations?orderby=ASC o DESC
         if (isset($_GET['orderby'])){
             $asociations = $this->model->getAllOrder($_GET['orderby']);
             $this->view->response($asociations);
